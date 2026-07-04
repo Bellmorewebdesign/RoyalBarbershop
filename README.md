@@ -1,79 +1,79 @@
 # Royal Barber Shop — Website
 
-A modern, sleek, **frontend-only** one-page website for **Royal Barber Shop**
-in Bellmore, NY. Built with **React + Vite + Tailwind CSS**. No backend, no
-forms, no fake booking — just a fast, premium marketing site that helps
-customers call, get directions, browse services and trust the shop.
+A modern, light and **joyous local-barbershop** website for **Royal Barber Shop**
+in Bellmore, NY. It is a **plain static site** — just HTML, CSS and vanilla
+JavaScript. **No build step, no backend, no forms.** That means it runs directly
+on GitHub Pages (or any static host) with nothing to compile.
 
 <p>
   <strong>2111 Bellmore Ave, Bellmore, NY 11710</strong><br />
   <strong>(646) 409-3677</strong> · Open 7 Days · ⭐ 4.7 (60 Google reviews)
 </p>
 
-## Quick start
+## View it locally
+
+No tools required — just open `index.html` in a browser. Or run a tiny local
+server so paths behave exactly like they will on GitHub Pages:
 
 ```bash
-npm install     # install dependencies
-npm run dev     # start the dev server (http://localhost:5173)
-npm run build   # production build → dist/
-npm run preview # preview the production build locally
+# Python 3
+python3 -m http.server 8080
+# then visit http://localhost:8080
 ```
 
-## Add the real photos
+## Deploy on GitHub Pages
 
-The site uses **only the shop's own local photos** — no stock or AI images.
-Drop them into [`public/images/`](public/images/README.md) using the filenames
-listed there. Until you do, each image slot shows a branded fallback panel so
-nothing ever looks broken.
+1. Push these files to your repository.
+2. In the repo, go to **Settings → Pages**.
+3. Under **Build and deployment**, set **Source = Deploy from a branch**.
+4. Choose the branch (e.g. `main`) and folder **`/ (root)`**, then **Save**.
+5. Your site publishes at `https://<user>.github.io/<repo>/`.
 
-| Filename               | Section              |
-| ---------------------- | -------------------- |
-| `storefront-night.jpg` | Hero background      |
-| `barber-kid-car.jpg`   | About (main)         |
-| `interior-boy.jpg`     | About (overlap)      |
-| `street-view.jpg`      | Visit / Location     |
-| `storefront-day.jpg`   | Spare                |
+All asset paths are **relative** (`./assets/...`, `./images/...`), so the site
+works whether it's served from the domain root or a project subpath. A
+`.nojekyll` file is included so GitHub Pages serves the files as-is.
 
-Image paths live in `src/lib/images.js` if you want to rename them.
+> Note: the earlier all-white page happened because the old version was a
+> React/Vite app that needs to be *built* first — GitHub Pages was serving the
+> raw source (`/src/main.jsx` → 404). This static version has no build step, so
+> that can't happen.
 
-## Project structure
+## Files
 
 ```
-index.html                 # SEO meta + JSON-LD local business schema
-src/
-  main.jsx                 # React entry
-  App.jsx                  # Page composition
-  index.css                # Tailwind layers + custom animations/utilities
-  lib/
-    business.js            # Name, address, phone, links — single source of truth
-    images.js              # Local image path map (+ replacement instructions)
-  data/
-    services.js            # Service cards
-    reviews.js             # Google reviews + keywords
-  hooks/
-    useScrollReveal.js     # IntersectionObserver scroll-reveal
-  components/
-    Navbar.jsx  Hero.jsx  About.jsx  Services.jsx
-    Reviews.jsx  Visit.jsx  Footer.jsx
-    Logo.jsx  SmartImage.jsx  Stars.jsx  icons.jsx
-public/
-  images/                  # ← drop shop photos here
+index.html            # The whole one-page site
+.nojekyll             # Tell GitHub Pages to skip Jekyll processing
+assets/
+  css/styles.css      # All styling (light theme, animations)
+  js/main.js          # Scroll reveal, sticky nav, mobile menu, counters
+images/               # Logo + shop photos (see images/README.md)
 ```
+
+## The photos & logo
+
+The site uses **only the shop's own images**, stored in `images/`:
+
+| File                   | Where it's used            |
+| ---------------------- | -------------------------- |
+| `Transparent_logo.png` | Nav, hero, footer (logo)   |
+| `storefront-day.png`   | Hero photo                 |
+| `barber-kid-car.png`   | Hero (small inset)         |
+| `interior-boy.png`     | About photo                |
+| `storefront-night.png` | "Walk right in" CTA band   |
+| `street-view.png`      | Visit / Location           |
+| `normal_logo.png`      | Spare (white-background logo) |
+
+To swap a photo, replace the file in `images/` (keep the same name), or update
+the `src="./images/..."` reference in `index.html`.
 
 ## Editing content
 
-- **Business info** (phone, address, hours, rating, Maps link): `src/lib/business.js`
-- **Services**: `src/data/services.js`
-- **Reviews**: `src/data/reviews.js`
-- **Colors / fonts / animations**: `tailwind.config.js` and `src/index.css`
+Everything lives in `index.html` — phone number, address, services, reviews and
+links are all plain HTML, easy to edit. Colors and fonts are CSS variables at
+the top of `assets/css/styles.css`.
 
-## Notes
-
-- Fully mobile responsive with a professional slide-in mobile menu.
-- Smooth scrolling, scroll-reveal animations, animated buttons and hover effects.
-- Respects `prefers-reduced-motion`.
-- Fonts are self-hosted (no external requests).
-- All buttons/links work: **Call** (`tel:`), **Get Directions** (Google Maps).
+- **Phone:** search `6464093677` (dial link) and `(646) 409-3677` (display).
+- **Directions link:** search `google.com/maps`.
 
 ---
 
