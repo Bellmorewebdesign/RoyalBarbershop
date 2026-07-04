@@ -1,41 +1,48 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0b0b0d" />
+    <meta name="theme-color" content="#c8202a" />
 
-    <!-- SEO / local business -->
-    <title>Royal Barber Shop | Bellmore, NY Barbers — Cuts, Fades & Shaves</title>
+    <title>Royal Barber Shop | Bellmore, NY — Cuts, Fades, Shaves | Open 7 Days</title>
     <meta
       name="description"
-      content="Royal Barber Shop is a trusted local barber shop in Bellmore, NY. Classic cuts, clean fades, shape-ups, beard trims, shaves and kids cuts. Open 7 days. Call (646) 409-3677."
+      content="Royal Barber Shop is a trusted local barber shop in Bellmore, NY. Classic cuts, clean fades, shape-ups, beard trims, shaves and kids cuts. Open 7 days — walk-ins welcome. Call (646) 409-3677."
     />
-    <meta name="keywords" content="barber Bellmore, barber shop Bellmore NY, fades, haircuts, shape-ups, shaves, kids cuts, Royal Barber Shop" />
-    <link rel="canonical" href="https://royalbarbershopbellmore.com/" />
+    <meta name="keywords" content="barber Bellmore, barber shop Bellmore NY, haircuts, fades, shape-ups, shaves, kids cuts, Royal Barber Shop" />
+    <link rel="canonical" href="https://bellmorewebdesign.github.io/RoyalBarbershop/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="business.business" />
     <meta property="og:title" content="Royal Barber Shop — Bellmore, NY" />
-    <meta property="og:description" content="Classic Cuts. Clean Fades. Local Bellmore Barbers." />
+    <meta property="og:description" content="Classic Cuts. Clean Fades. Local Bellmore Barbers. Open 7 days, walk-ins welcome." />
+    <meta property="og:image" content="./images/storefront-day.png" />
 
-    <!--
-      Favicon: inline SVG monogram crest (no external files / URLs).
-    -->
+    <!-- Favicon: inline barber-pole SVG (no external file) -->
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b0b0d'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' font-weight='700' text-anchor='middle' fill='%23c9a24b'%3ER%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23ffffff'/%3E%3Crect x='38' y='16' width='24' height='68' rx='12' fill='%23fff' stroke='%23111' stroke-width='4'/%3E%3Cpath d='M38 30 L62 20 M38 46 L62 36 M38 62 L62 52 M38 78 L62 68' stroke='%23c8202a' stroke-width='7'/%3E%3Cpath d='M38 40 L62 30 M38 56 L62 46 M38 72 L62 62' stroke='%231f5fbf' stroke-width='7'/%3E%3C/svg%3E"
     />
 
-    <!--
-      Local business structured data. Reviews reflect real Google feedback.
-    -->
+    <!-- Fonts (self-contained site otherwise; fonts only) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Site styles (relative path — works on GitHub Pages root or a subpath) -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!-- Local business structured data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "HairSalon",
         "name": "Royal Barber Shop",
-        "image": "",
+        "image": "./images/storefront-day.png",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "2111 Bellmore Ave",
@@ -45,8 +52,8 @@
           "addressCountry": "US"
         },
         "telephone": "+1-646-409-3677",
-        "url": "https://royalbarbershopbellmore.com/",
         "priceRange": "$$",
+        "openingHours": "Mo-Su",
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.7",
@@ -55,8 +62,437 @@
       }
     </script>
   </head>
+
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- ================= ANNOUNCEMENT MARQUEE ================= -->
+    <div class="topbar" aria-hidden="false">
+      <div class="marquee">
+        <div class="marquee__track">
+          <!-- content is duplicated for a seamless loop -->
+          <span>★ 4.7 on Google</span><span class="dot">•</span>
+          <span>Open 7 Days</span><span class="dot">•</span>
+          <span>Walk-Ins Welcome</span><span class="dot">•</span>
+          <span>Family Owned &amp; Local</span><span class="dot">•</span>
+          <span>Kids Cuts Welcome</span><span class="dot">•</span>
+          <span>Bellmore, NY</span><span class="dot">•</span>
+          <span>★ 4.7 on Google</span><span class="dot">•</span>
+          <span>Open 7 Days</span><span class="dot">•</span>
+          <span>Walk-Ins Welcome</span><span class="dot">•</span>
+          <span>Family Owned &amp; Local</span><span class="dot">•</span>
+          <span>Kids Cuts Welcome</span><span class="dot">•</span>
+          <span>Bellmore, NY</span><span class="dot">•</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= NAV ================= -->
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a href="#home" class="nav__brand" aria-label="Royal Barber Shop — home">
+          <img src="./images/Transparent_logo.png" alt="Royal Barber Shop logo" class="nav__logo" />
+        </a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#visit">Visit</a>
+        </nav>
+
+        <a href="tel:+16464093677" class="btn btn--red nav__cta">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h3l1.2 4-2 1.3a12 12 0 0 0 5 5l1.3-2 4 1.2v3c0 1-.8 1.8-1.8 1.7A16 16 0 0 1 4.8 6.3 1.8 1.8 0 0 1 6.5 3.5z"/></svg>
+          Call Now
+        </a>
+
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobileMenu" aria-hidden="true">
+      <div class="mobile__backdrop" data-close></div>
+      <nav class="mobile__panel" aria-label="Mobile">
+        <a href="#about" data-close>About</a>
+        <a href="#services" data-close>Services</a>
+        <a href="#reviews" data-close>Reviews</a>
+        <a href="#visit" data-close>Visit</a>
+        <div class="mobile__cta">
+          <a href="tel:+16464093677" class="btn btn--red" data-close>Call (646) 409-3677</a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=2111%20Bellmore%20Ave%2C%20Bellmore%2C%20NY%2011710" target="_blank" rel="noopener" class="btn btn--blue" data-close>Get Directions</a>
+        </div>
+        <p class="mobile__note">Open 7 Days · Walk-Ins Welcome</p>
+      </nav>
+    </div>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <section id="home" class="hero">
+        <div class="pole pole--top" aria-hidden="true"></div>
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow reveal" data-reveal>
+              <span class="eyebrow__script">Welcome to</span> Bellmore's neighborhood barber shop
+            </p>
+
+            <img src="./images/Transparent_logo.png" alt="Royal Barber Shop" class="hero__logo reveal" data-reveal data-delay="80" />
+
+            <h1 class="hero__title reveal" data-reveal data-delay="140">
+              Classic Cuts. <span class="text-red">Clean Fades.</span><br />
+              Local Bellmore Barbers.
+            </h1>
+
+            <p class="hero__sub reveal" data-reveal data-delay="220">
+              Royal Barber Shop is a trusted local barber shop in Bellmore, NY —
+              friendly service, sharp haircuts and a welcoming, family-style chair.
+            </p>
+
+            <div class="hero__actions reveal" data-reveal data-delay="300">
+              <a href="tel:+16464093677" class="btn btn--red btn--lg">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h3l1.2 4-2 1.3a12 12 0 0 0 5 5l1.3-2 4 1.2v3c0 1-.8 1.8-1.8 1.7A16 16 0 0 1 4.8 6.3 1.8 1.8 0 0 1 6.5 3.5z"/></svg>
+                Call Now
+              </a>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=2111%20Bellmore%20Ave%2C%20Bellmore%2C%20NY%2011710" target="_blank" rel="noopener" class="btn btn--blue btn--lg">
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6.5-5.7 6.5-11a6.5 6.5 0 1 0-13 0C5.5 15.3 12 21 12 21z"/><circle cx="12" cy="10" r="2.4" fill="#fff"/></svg>
+                Get Directions
+              </a>
+            </div>
+
+            <div class="hero__rating reveal" data-reveal data-delay="380">
+              <span class="stars" style="--rating: 4.7" aria-hidden="true"></span>
+              <strong>4.7</strong>
+              <span class="sep"></span>
+              <span>60 Google reviews</span>
+            </div>
+          </div>
+
+          <!-- Hero visual: real shop photos -->
+          <div class="hero__media reveal" data-reveal data-delay="200">
+            <div class="hero__frame float">
+              <!-- Replace ./images/storefront-day.png to change hero photo -->
+              <img src="./images/storefront-day.png" alt="Royal Barber Shop storefront on Bellmore Avenue" />
+            </div>
+            <div class="hero__pill">
+              <img src="./images/barber-kid-car.png" alt="A young customer getting a haircut at Royal Barber Shop" />
+            </div>
+            <div class="hero__badge">
+              <span class="hero__badge-num">4.7</span>
+              <span class="stars stars--sm" style="--rating: 4.7" aria-hidden="true"></span>
+              <span class="hero__badge-txt">60 reviews</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FEATURE STRIP ================= -->
+      <section class="features" aria-label="Highlights">
+        <div class="container features__row">
+          <div class="feature reveal" data-reveal>
+            <svg class="feature__ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+            <span>Open 7 Days</span>
+          </div>
+          <div class="feature reveal" data-reveal data-delay="80">
+            <svg class="feature__ico" viewBox="0 0 24 24"><path d="M4 12h16"/><path d="M13 5l7 7-7 7"/></svg>
+            <span>Walk-Ins Welcome</span>
+          </div>
+          <div class="feature reveal" data-reveal data-delay="160">
+            <svg class="feature__ico" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+            <span>Family Owned</span>
+          </div>
+          <div class="feature reveal" data-reveal data-delay="240">
+            <svg class="feature__ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M6 20c.6-3.4 3-5 6-5s5.4 1.6 6 5"/></svg>
+            <span>Kids &amp; Adults</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ABOUT ================= -->
+      <section id="about" class="section about">
+        <div class="container about__grid">
+          <div class="about__media reveal" data-reveal>
+            <div class="about__frame">
+              <!-- Replace ./images/interior-boy.png -->
+              <img src="./images/interior-boy.png" alt="Inside Royal Barber Shop with barbers at work" />
+            </div>
+            <div class="about__tag">
+              <span class="about__tag-big">Walk-Ins</span>
+              <span class="about__tag-small">Welcome</span>
+            </div>
+          </div>
+
+          <div class="about__copy">
+            <p class="kicker reveal" data-reveal>About the shop</p>
+            <h2 class="reveal" data-reveal data-delay="80">
+              A neighborhood barber shop <span class="text-red">Bellmore trusts.</span>
+            </h2>
+            <p class="reveal" data-reveal data-delay="140">
+              Royal Barber Shop is a local Bellmore barber shop known for friendly
+              service, clean haircuts and fair prices. Whether you need a fresh
+              fade, a sharp shape-up, a beard trim or a traditional shave, our
+              barbers take the time to get it right.
+            </p>
+            <p class="reveal" data-reveal data-delay="200">
+              It's a welcoming, family-style atmosphere where regulars feel at home
+              and first-timers leave looking their best — from little ones getting
+              their first kids cut to guys who've trusted the same chair for years.
+            </p>
+
+            <div class="about__stats reveal" data-reveal data-delay="260">
+              <div class="stat"><span class="stat__num" data-count="4.7" data-decimals="1">4.7</span><span class="stat__lbl">Google Rating</span></div>
+              <div class="stat"><span class="stat__num" data-count="60" data-suffix="+">60+</span><span class="stat__lbl">Reviews</span></div>
+              <div class="stat"><span class="stat__num">7</span><span class="stat__lbl">Days a Week</span></div>
+              <div class="stat"><span class="stat__num">All</span><span class="stat__lbl">Ages Welcome</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SERVICES ================= -->
+      <section id="services" class="section services">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal" data-reveal>What we do</p>
+            <h2 class="reveal" data-reveal data-delay="80">Services for every <span class="text-red">chair</span></h2>
+            <p class="section__lead reveal" data-reveal data-delay="140">
+              Full-service cuts and grooming for men and kids — walk in and leave looking sharp.
+            </p>
+          </div>
+
+          <div class="cards">
+            <!-- Haircuts -->
+            <article class="card reveal" data-reveal>
+              <div class="card__ico"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><line x1="8" y1="7.6" x2="20" y2="18"/><line x1="8" y1="16.4" x2="20" y2="6"/></svg></div>
+              <h3>Haircuts</h3>
+              <p>Precision cuts tailored to you — timeless classics to modern styles, finished clean every time.</p>
+            </article>
+            <!-- Fades -->
+            <article class="card reveal" data-reveal data-delay="80">
+              <div class="card__ico"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="4" rx="1"/><path d="M5 8v3M7 8v3M9 8v4"/><path d="M12 13h8M12 16h8M12 19h8"/></svg></div>
+              <h3>Fades</h3>
+              <p>Skin, low, mid, high or taper — seamless blends done right by barbers who fade all day, every day.</p>
+            </article>
+            <!-- Shape-ups -->
+            <article class="card reveal" data-reveal data-delay="160">
+              <div class="card__ico"><svg viewBox="0 0 24 24"><path d="M4 20 15 9"/><path d="m13 7 4 4"/><path d="M15.5 4.5 19.5 8.5"/></svg></div>
+              <h3>Shape-Ups</h3>
+              <p>Crisp, sharp line-ups and edge work that frame your cut and keep you looking fresh.</p>
+            </article>
+            <!-- Beard trims -->
+            <article class="card reveal" data-reveal>
+              <div class="card__ico"><svg viewBox="0 0 24 24"><path d="M6 5v4a6 6 0 0 0 12 0V5"/><path d="M6 9c0 5 2.5 9 6 9s6-4 6-9"/><path d="M9.5 8.5h.01M14.5 8.5h.01"/></svg></div>
+              <h3>Beard Trims</h3>
+              <p>Shaped, lined and detailed beard work to keep your facial hair neat and on point.</p>
+            </article>
+            <!-- Shaves -->
+            <article class="card reveal" data-reveal data-delay="80">
+              <div class="card__ico"><svg viewBox="0 0 24 24"><path d="M3 3l7 7"/><path d="M9.5 9.5 12 7l5 5c1 1 1 2.5 0 3.5s-2.5 1-3.5 0z"/><path d="M13 15.5 7.5 21"/></svg></div>
+              <h3>Shaves</h3>
+              <p>Traditional straight-razor hot shaves for a close, smooth and comfortable finish.</p>
+            </article>
+            <!-- Kids cuts -->
+            <article class="card reveal" data-reveal data-delay="160">
+              <div class="card__ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M8 6.5c1.2-2.5 6.8-2.5 8 0"/><path d="M6.5 21c.6-3.6 3-5.5 5.5-5.5s4.9 1.9 5.5 5.5"/></svg></div>
+              <h3>Kids Cuts</h3>
+              <p>Patient, friendly cuts for the little ones in a welcoming, family-style atmosphere.</p>
+            </article>
+          </div>
+
+          <div class="services__cta reveal" data-reveal>
+            <p>Ready for your next cut? No appointment needed.</p>
+            <a href="tel:+16464093677" class="btn btn--red btn--lg">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h3l1.2 4-2 1.3a12 12 0 0 0 5 5l1.3-2 4 1.2v3c0 1-.8 1.8-1.8 1.7A16 16 0 0 1 4.8 6.3 1.8 1.8 0 0 1 6.5 3.5z"/></svg>
+              Call (646) 409-3677
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CTA BAND (night photo) ================= -->
+      <section class="band" aria-label="Visit us">
+        <!-- Replace ./images/storefront-night.png -->
+        <img class="band__bg" src="./images/storefront-night.png" alt="" aria-hidden="true" />
+        <div class="band__overlay"></div>
+        <div class="container band__inner">
+          <p class="band__script reveal" data-reveal>Fresh cut?</p>
+          <h2 class="reveal" data-reveal data-delay="80">Walk right in — we're open 7 days.</h2>
+          <div class="band__actions reveal" data-reveal data-delay="160">
+            <a href="tel:+16464093677" class="btn btn--red btn--lg">Call Now</a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=2111%20Bellmore%20Ave%2C%20Bellmore%2C%20NY%2011710" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">Get Directions</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= REVIEWS ================= -->
+      <section id="reviews" class="section reviews">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal" data-reveal>What people say</p>
+            <h2 class="reveal" data-reveal data-delay="80">Loved by the <span class="text-red">neighborhood</span></h2>
+          </div>
+
+          <!-- Rating summary -->
+          <div class="rating-summary reveal" data-reveal data-delay="120">
+            <div class="rating-summary__score">
+              <span class="rating-summary__num">4.7</span>
+              <span class="stars" style="--rating: 4.7" aria-hidden="true"></span>
+              <span class="rating-summary__meta">Based on <strong>60 Google reviews</strong></span>
+            </div>
+            <div class="rating-summary__keys">
+              <span>haircuts</span>
+              <span>atmosphere</span>
+              <span>overall experience</span>
+              <span>island</span>
+            </div>
+          </div>
+
+          <!-- Review cards -->
+          <div class="reviews__grid">
+            <article class="review reveal" data-reveal>
+              <span class="stars stars--sm" style="--rating:5" aria-hidden="true"></span>
+              <p class="review__text">“What a great barber shop! Reuben cut my hair and Tony cut my son's. Great people, nice atmosphere. Haircuts look awesome! I live down the block and this was my first time going to them, wish I had stopped in sooner!”</p>
+              <div class="review__by"><span class="avatar" data-name="Jimmy Roams"></span><div><strong>Jimmy Roams</strong><small>Google review</small></div></div>
+            </article>
+
+            <article class="review reveal" data-reveal data-delay="60">
+              <span class="stars stars--sm" style="--rating:5" aria-hidden="true"></span>
+              <p class="review__text">“Family owned, local barber shop. Tony and his sons do a great job. Prices are fair. It's been my place for 5 years. Stop in for a cut and a shave.”</p>
+              <div class="review__by"><span class="avatar" data-name="Robert LoCascio"></span><div><strong>Robert LoCascio</strong><small>Google review</small></div></div>
+            </article>
+
+            <article class="review reveal" data-reveal data-delay="120">
+              <span class="stars stars--sm" style="--rating:5" aria-hidden="true"></span>
+              <p class="review__text">“Absolutely wonderful... Tony is the best with my 2 boys and myself.”</p>
+              <div class="review__by"><span class="avatar" data-name="Sean OLeary"></span><div><strong>Sean O'Leary</strong><small>Google review</small></div></div>
+            </article>
+
+            <article class="review reveal" data-reveal>
+              <span class="stars stars--sm" style="--rating:5" aria-hidden="true"></span>
+              <p class="review__text">“Tony and his team are excellent barbers. In addition, they have created a friendly environment that serves both young and old. Highly recommended!”</p>
+              <div class="review__by"><span class="avatar" data-name="Vincent Ciro"></span><div><strong>Vincent Ciro, Sr.</strong><small>Google review</small></div></div>
+            </article>
+
+            <article class="review reveal" data-reveal data-delay="60">
+              <span class="stars stars--sm" style="--rating:5" aria-hidden="true"></span>
+              <p class="review__text">“This place is simply awesome. I always leave extremely happy. They are very friendly and are always happy to see you walk in their door. I highly recommend this place to anyone looking for a barber.”</p>
+              <div class="review__by"><span class="avatar" data-name="Rich Szeglin"></span><div><strong>Rich Szeglin</strong><small>Google review</small></div></div>
+            </article>
+
+            <article class="review reveal" data-reveal data-delay="120">
+              <span class="stars stars--sm" style="--rating:5" aria-hidden="true"></span>
+              <p class="review__text">“Great place with great people. Excellent service! Tony and Dom make you feel like family.”</p>
+              <div class="review__by"><span class="avatar" data-name="Kyle Quinn"></span><div><strong>Kyle Quinn</strong><small>Google review</small></div></div>
+            </article>
+
+            <article class="review reveal" data-reveal>
+              <span class="stars stars--sm" style="--rating:5" aria-hidden="true"></span>
+              <p class="review__text">“Best cut on the island. Bar none. Tony, Iggy and the guys over there give great service and get the job done perfect every time. No matter how raggedy I come in, I always leave sharp.”</p>
+              <div class="review__by"><span class="avatar" data-name="adam brollosy"></span><div><strong>adam brollosy</strong><small>Google review</small></div></div>
+            </article>
+
+            <article class="review reveal" data-reveal data-delay="60">
+              <span class="stars stars--sm" style="--rating:5" aria-hidden="true"></span>
+              <p class="review__text">“Excellent haircut and overall experience, recommended!! A+++”</p>
+              <div class="review__by"><span class="avatar" data-name="Avi Peltz"></span><div><strong>Avi Peltz</strong><small>Google review</small></div></div>
+            </article>
+
+            <article class="review reveal" data-reveal data-delay="120">
+              <span class="stars stars--sm" style="--rating:5" aria-hidden="true"></span>
+              <p class="review__text">“This place is the best barber shop in town. I've been going there for over 20 years. Stan is the man!”</p>
+              <div class="review__by"><span class="avatar" data-name="Mike McGrath"></span><div><strong>Mike McGrath Sr</strong><small>Google review</small></div></div>
+            </article>
+
+            <article class="review reveal" data-reveal>
+              <span class="stars stars--sm" style="--rating:5" aria-hidden="true"></span>
+              <p class="review__text">“I never used to care who cut my hair until I went to this shop. Now I won't go anywhere else. Great service!”</p>
+              <div class="review__by"><span class="avatar" data-name="Ken Merting"></span><div><strong>Ken Merting</strong><small>Google review</small></div></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= VISIT / LOCATION ================= -->
+      <section id="visit" class="section visit">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal" data-reveal>Come see us</p>
+            <h2 class="reveal" data-reveal data-delay="80">Visit Royal Barber Shop</h2>
+          </div>
+
+          <div class="visit__grid">
+            <!-- Location photo → Google Maps -->
+            <a class="visit__map reveal" data-reveal href="https://www.google.com/maps/dir/?api=1&destination=2111%20Bellmore%20Ave%2C%20Bellmore%2C%20NY%2011710" target="_blank" rel="noopener" aria-label="Open Royal Barber Shop in Google Maps">
+              <!-- Replace ./images/street-view.png -->
+              <img src="./images/street-view.png" alt="Street view of Royal Barber Shop at 2111 Bellmore Ave" />
+              <span class="visit__map-pin">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6.5-5.7 6.5-11a6.5 6.5 0 1 0-13 0C5.5 15.3 12 21 12 21z"/><circle cx="12" cy="10" r="2.4" fill="#fff"/></svg>
+                Open in Maps
+              </span>
+            </a>
+
+            <!-- Details -->
+            <div class="visit__info reveal" data-reveal data-delay="120">
+              <div class="info-row">
+                <span class="info-row__ico"><svg viewBox="0 0 24 24"><path d="M12 21s6.5-5.7 6.5-11a6.5 6.5 0 1 0-13 0C5.5 15.3 12 21 12 21z"/><circle cx="12" cy="10" r="2.2" fill="#fff"/></svg></span>
+                <div><span class="info-row__lbl">Address</span><p>2111 Bellmore Ave<br />Bellmore, NY 11710</p></div>
+              </div>
+              <div class="info-row">
+                <span class="info-row__ico"><svg viewBox="0 0 24 24"><path d="M6.5 3.5h3l1.2 4-2 1.3a12 12 0 0 0 5 5l1.3-2 4 1.2v3c0 1-.8 1.8-1.8 1.7A16 16 0 0 1 4.8 6.3 1.8 1.8 0 0 1 6.5 3.5z"/></svg></span>
+                <div><span class="info-row__lbl">Phone</span><p><a href="tel:+16464093677">(646) 409-3677</a></p></div>
+              </div>
+              <div class="info-row">
+                <span class="info-row__ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
+                <div><span class="info-row__lbl">Hours</span><p>Open 7 Days<br /><small>Hours may vary on holidays.</small></p></div>
+              </div>
+              <div class="visit__actions">
+                <a href="tel:+16464093677" class="btn btn--red btn--lg">
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h3l1.2 4-2 1.3a12 12 0 0 0 5 5l1.3-2 4 1.2v3c0 1-.8 1.8-1.8 1.7A16 16 0 0 1 4.8 6.3 1.8 1.8 0 0 1 6.5 3.5z"/></svg>
+                  Call Now
+                </a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=2111%20Bellmore%20Ave%2C%20Bellmore%2C%20NY%2011710" target="_blank" rel="noopener" class="btn btn--blue btn--lg">
+                  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6.5-5.7 6.5-11a6.5 6.5 0 1 0-13 0C5.5 15.3 12 21 12 21z"/><circle cx="12" cy="10" r="2.4" fill="#fff"/></svg>
+                  Get Directions
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="footer__check" aria-hidden="true"></div>
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <img src="./images/Transparent_logo.png" alt="Royal Barber Shop" class="footer__logo" />
+          <p>A trusted local barber shop in Bellmore, NY — classic cuts, clean fades and a welcoming, family-style atmosphere. Walk in and leave looking sharp.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#visit">Visit</a>
+        </div>
+
+        <div class="footer__col">
+          <h4>Find Us</h4>
+          <p>2111 Bellmore Ave<br />Bellmore, NY 11710</p>
+          <p><a href="tel:+16464093677">(646) 409-3677</a></p>
+          <p class="footer__muted">Open 7 Days · Hours may vary on holidays.</p>
+        </div>
+      </div>
+
+      <div class="footer__bar">
+        <div class="container footer__bar-inner">
+          <p>© <span id="year"></span> Royal Barber Shop. All rights reserved.</p>
+          <p>Powered by <a href="https://Bellmorewebdesign.com" target="_blank" rel="noopener">Bellmore Web Design</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/main.js" defer></script>
   </body>
 </html>
