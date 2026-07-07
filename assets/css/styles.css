@@ -1183,6 +1183,36 @@ h2 {
   text-decoration: underline;
 }
 
+/* "Powered by Bellmore Web Design" — larger + more noticeable */
+.footer__powered {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.98rem;
+  color: #b9c4d6;
+}
+.footer__powered a {
+  display: inline-block;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--gold);
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(245, 166, 35, 0.12);
+  border: 1px solid rgba(245, 166, 35, 0.4);
+  box-shadow: 0 6px 18px -10px rgba(245, 166, 35, 0.6);
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease,
+    color 0.25s ease;
+}
+.footer__powered a:hover {
+  background: var(--gold);
+  color: #14233d;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px -10px rgba(245, 166, 35, 0.75);
+  text-decoration: none;
+}
+
 /* ==========================================================================
    Scroll reveal
    ========================================================================== */
